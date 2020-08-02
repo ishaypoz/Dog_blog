@@ -1,0 +1,88 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<title>RESTful Route Table</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10">
+					<div class="jumbotron">
+						<h1>RESTful Routes</h1>
+						<p>A table of RESTful routes</p>
+					</div>
+
+					<table class="table table-hover table-bordered">
+						<thed>
+							<tr>
+								<th>Name</th>
+								<th>Path</th>
+								<th>Http verb</th>
+								<th>Purpose</th>
+								<th>Mongoose Method</th>
+							</tr>
+						</thed>
+						<tbody>
+							<tr>
+								<td>Index</td>
+								<td>/dogs</td>
+								<td>GET</td>
+								<td>List all dogs</td>
+								<td>Dog.find()</td>
+							</tr>
+							<tr class="table-success">
+								<td>New</td>
+								<td>/dogs/new</td>
+								<td>GET</td>
+								<td>Show new dog form</td>
+								<td></td>
+							</tr>
+							<tr class="table-success">
+								<td>Create</td>
+								<td>/dogs</td>
+								<td>POST</td>
+								<td>Create a new dog, then redircet</td>
+								<td>Dog.create()</td>
+							</tr>
+							<tr class="table-info">
+								<td>Show</td>
+								<td>/dogs</td>
+								<td>GET</td>
+								<td>Show info about specific dog</td>
+								<td>Dog.findById()</td>
+							</tr>
+							<tr class="table-warning">
+								<td>Edit</td>
+								<td>/dogs/:id/edit</td>
+								<td>GET</td>
+								<td>Show edit form for one dog</td>
+								<td>Dog.findById()</td>
+							</tr>
+							<tr class="table-warning">
+								<td>Update</td>
+								<td>/dogs/:id</td>
+								<td>PUT</td>
+								<td>Show edit form for one dog</td>
+								<td>Dog.findByIdAndUpdate()</td>
+							</tr>
+							<tr class="table-danger">
+								<td>Destroy</td>
+								<td>/dogs/:id</td>
+								<td>DELETE</td>
+								<td>Delete a particular dog, then redirect</td>
+								<td>Dog.findByIdAndRemove()</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

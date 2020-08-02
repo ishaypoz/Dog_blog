@@ -1,0 +1,13 @@
+i .icon {
+	font-size: 2em;
+}
+.box {
+	margin-top: 2em !important;
+}
+img {
+	height: 200px;
+	width: auto;
+}
+#delete-form-button {
+	display: inline;
+}

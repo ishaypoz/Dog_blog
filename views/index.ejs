@@ -1,0 +1,32 @@
+
+<%- include('partials/header'); %>
+
+<!-- in ejs%= only show text %- show html -->
+<div class="box">
+    <div class="ui main text container segment">
+        <div class="ui huge header">Resfull Blog App</div>
+            <div class="ui top attach segment">
+                <div class="ui divide items">
+                <% blogs.forEach(function(blog){ %>
+                <div class="item">
+                    
+                    <div class="image"><img src="<%= blog.image %>" /></div>
+                        <div class="content">
+                            <a href="/blogs/<%= blog._id %>"" class="header"><%= blog.title %></a>
+                            <div class="meta">
+                                <span>Created at: <%= blog.created %></span>
+                                <p><%= blog.body.substring(0,100) %>...</p>
+                            </div>
+                            <div class="extra"></div>
+                                <a href="/blogs/<%= blog._id %>"" class="ui floted basic violet button">Read More
+                                    <i class="right chevron icon"></i>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% }) %> <%- include('partials/footer'); %>
